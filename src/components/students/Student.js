@@ -1,11 +1,7 @@
 import { useEffect } from "react";
 import {
-  Box,
-  Button,
-  Grid,
   Paper,
   Typography,
-  IconButton,
 } from "@material-ui/core";
 import { getStudent, clearStudent } from "../../redux/features/studentSlice";
 import { useDispatch, useSelector } from "react-redux";
