@@ -111,7 +111,7 @@ export const studentSlice = createSlice({
   },
   reducers: {
     getStudent: (state, action) => {
-      state.student = state.students.find((el) => el.id == action.payload);
+      state.student = state.students.find((el) => el.id === action.payload);
     },
     clearStudent: (state) => {
       state.student = {
@@ -127,11 +127,11 @@ export const studentSlice = createSlice({
     },
     updateStudent: (state, action) => {
       state.students = state.students.map((el) =>
-        el.id == action.payload.id ? action.payload : el
+        el.id === action.payload.id ? action.payload : el
       );
     },
     deleteStudent: (state, action) => {
-      state.students = state.students.filter((el) => el.id != action.payload);
+      state.students = state.students.filter((el) => el.id !== action.payload);
     },
   },
 });
