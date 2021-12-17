@@ -18,7 +18,7 @@ const Student = () => {
       //eslint-disable-next-line
       dispatch(clearStudent());
     };
-  });
+  },[]);
   return (
     <Paper>
       <Typography variant="h2" gutterBottom>
