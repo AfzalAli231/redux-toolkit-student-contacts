@@ -12,8 +12,10 @@ const Student = () => {
 
   const student = useSelector((state) => state.student.student);
   useEffect(() => {
+    //eslint-disable-next-line
     dispatch(getStudent(params.id));
     return () => {
+      //eslint-disable-next-line
       dispatch(clearStudent());
     };
   }, []);
