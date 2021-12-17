@@ -25,17 +25,16 @@ const EditStudent = () => {
   const dispatch = useDispatch();
   const student = useSelector((state) => state.student.student);
   useEffect(() => {
-    //eslint-disable-next-line
     dispatch(getStudent(params.id));
     return () => {
-      //eslint-disable-next-line
       dispatch(clearStudent());
     };
+    //eslint-disable-next-line
   }, []);
 
   useEffect(() => {
-    //eslint-disable-next-line
     reset(student);
+    //eslint-disable-next-line
   }, [student]);
 
   const onSubmit = (data) => {
