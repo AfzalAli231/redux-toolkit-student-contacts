@@ -10,7 +10,7 @@ import {
 } from "../../redux/features/studentSlice";
 
 const EditStudent = () => {
-  const { handleSubmit, control } = useForm({
+  const { handleSubmit, control, reset } = useForm({
     defaultValues: {
       firstName: "",
       lastName: "",
@@ -33,10 +33,10 @@ const EditStudent = () => {
     };
   }, []);
 
-//   useEffect(() => {
-//     //eslint-disable-next-line
-//     reset(student);
-//   }, [student]);
+  useEffect(() => {
+    //eslint-disable-next-line
+    reset(student);
+  }, [student]);
 
   const onSubmit = (data) => {
     dispatch(updateStudent(data));
